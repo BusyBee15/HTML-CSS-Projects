@@ -13,6 +13,9 @@ body {
     height: 5rem;
     background: #222;
     padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .nav-title {
@@ -32,13 +35,20 @@ body {
 }
 
 .hero {
-    background: linear-gradient(
-        to right, 
-        rgba(105, 62, 27, 0.5), 
-        rgba(105, 62, 27, 1)
-      ),
-      url("./coffee2.jpg") center/cover;
+    background: rgba(105, 62, 27, 1);
     min-height: calc(100vh - 5rem); 
+    position: relative;
+    
+}
+
+@media screen and (min-width:768px){
+    .hero {
+            background: linear-gradient(to right,
+                    rgba(105, 62, 27, 0.5),
+                    rgba(105, 62, 27, 1)),
+                url("./coffee2.jpg") center/cover;
+            
+        }
 }
 
 .hero-center {
@@ -47,6 +57,13 @@ body {
     margin: 0 auto;
     padding: 5rem 0;
     color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* border: 1px solid red; */
+    transform: translate(-50%, -50%);
+    text-align: center;
+
 }
 
 .hero-center h1 {
@@ -57,6 +74,7 @@ body {
 .hero-center p{
   margin-bottom: 1.5rem;
   max-width: 35em;
+  margin: 0 auto;
 }
 
 .hero-btn {
@@ -67,3 +85,9 @@ body {
     color: #fff;
     letter-spacing: 2px;
 }
+
+.temp {
+    min-height: 100vh;
+    background: palevioletred;
+}
+
