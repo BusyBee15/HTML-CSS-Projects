@@ -84,10 +84,41 @@ body {
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 2px;
+    animation: slideFromBottom 2s ease-in-out 1;
+    
 }
 
 .temp {
     min-height: 100vh;
     background: palevioletred;
+}
+
+.hero-text {
+    animation: slideFromTop 2s ease-in-out 1;
+    margin-bottom: 1.5rem;
+    /* border: 1px solid red; */
+}
+
+/* animations */
+@keyframes slideFromTop {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFromBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
