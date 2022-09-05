@@ -299,15 +299,73 @@ About
 }
 
 
-/* section add to globals */
-/* title add to globals */
-/* section center add to globals */
+/* section add to globals  - done*/
+
+/* title add to globals - done*/
+/* section center add to globals  - done */
 
 /*
 =============== 
 Services
 ===============
 */
+.services {
+    background: var(--clr-grey-10);
+}
+
+.service {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.service-icon {
+    background: var(--clr-primary-5);
+    color: var(--clr-primary-1);
+    font-size: 2rem;
+    padding: 0.5rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.service-text {
+    max-width: 20rem;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:576px) {
+    .services-center {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .service {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+@media screen and (min-width:992px) {
+    .service {
+        flex: 0 0 33.3%;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width:1170px) {
+    .service {
+        display: flex;
+        text-align: left;
+        
+    }
+    .service-icon {
+        align-self: start;
+    }
+    .service-info {
+        padding-left: 1rem;
+    }
+    .service-title {
+        margin-bottom: 0.5rem;
+    }
+}
 
 /*
 =============== 
